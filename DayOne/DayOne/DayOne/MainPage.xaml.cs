@@ -16,9 +16,9 @@ namespace DayOne
 
         private void BtnShowMessage_Clicked(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(entUserInput.Text))
+            if (!string.IsNullOrWhiteSpace(entUserInput.Text))
             {
-                btnShowMessage.Text = $"Hello {entUserInput}, welcome to 10 Days of Xamarin";
+                btnShowMessage.Text = $"Hello {entUserInput.Text}, welcome to 10 Days of Xamarin";
             }
             else
             {
