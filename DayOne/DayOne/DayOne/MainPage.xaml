@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="DayOne.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:DayOne">
+
+    <StackLayout
+        Margin="16,20,16,0"
+        HorizontalOptions="Center"
+        VerticalOptions="Center">
+        <Entry x:Name="entUserInput" Placeholder="Please enter your name" />
+        <Button
+            x:Name="btnShowMessage"
+            Clicked="BtnShowMessage_Clicked"
+            Text="Say hello" />
+        <Label x:Name="lblGreetingMessage" FontSize="20" />
+    </StackLayout>
+
+
+</ContentPage>
