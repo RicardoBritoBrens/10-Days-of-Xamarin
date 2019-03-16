@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace DayTwo
@@ -14,19 +10,41 @@ namespace DayTwo
             InitializeComponent();
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private void BtnSave_Clicked(object sender, EventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(entUsername.Text))
+            btnSave.IsEnabled = false;
+            entContent.Text = string.Empty;
+            entTitle.Text = string.Empty;
+        }
+
+        private void CheckIfShouldBeEnableButtonSave()
+        {
+            btnSave.IsEnabled = false;
+            if (!string.IsNullOrWhiteSpace(entTitle.Text) && !string.IsNullOrWhiteSpace(entContent.Text))
             {
-                greetingLabel.Text = $"Hello {entUsername.Text}, welcome to 10 Days of Xamarin.";
+                btnSave.IsEnabled = true;
             }
             else
             {
-                DisplayAlert("Error", "Your name can't be empty", "Oh right");
+                DisplayAlert("Error", "Title and Content entries can not be empty", "OK");
             }
         }
 
+        private void BtnCancel_Clicked(object sender, EventArgs e)
+        {
+            btnSave.IsEnabled = false;
+            entContent.Text = string.Empty;
+            entTitle.Text = string.Empty;
+        }
 
+        private void EntTitle_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            CheckIfShouldBeEnableButtonSave();
+        }
 
+        private void EntContent_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            CheckIfShouldBeEnableButtonSave();
+        }
     }
 }

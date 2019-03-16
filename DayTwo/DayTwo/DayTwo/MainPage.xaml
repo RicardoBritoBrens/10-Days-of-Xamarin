@@ -4,13 +4,46 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:DayTwo">
-
-    <StackLayout Margin="16,20,16,0">
-        <Entry x:Name="entUsername" Placeholder="Enter your name" />
-        <Button Clicked="Button_Clicked" Text="Say hello" />
-        <Label
-            x:Name="greetingLabel"
-            FontSize="20"
-            Text="Hello stranger, welcome to 10 Days of Xamarin." />
+    <ContentPage.Resources>
+        <Style x:Key="mainButtonStyle" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="{StaticResource accentColor}" />
+            <Setter Property="TextColor" Value="{StaticResource whiteColor}" />
+        </Style>
+        <Style
+            x:Key="cancelButtonStyle"
+            BasedOn="{StaticResource mainButtonStyle}"
+            TargetType="Button">
+            <Setter Property="BackgroundColor" Value="{StaticResource secondaryColor}" />
+        </Style>
+        <Style
+            x:Key="deleteButtonStyle"
+            BasedOn="{StaticResource mainButtonStyle}"
+            TargetType="Button">
+            <Setter Property="BackgroundColor" Value="{StaticResource destructiveColor}" />
+        </Style>
+    </ContentPage.Resources>
+    <StackLayout
+        Margin="16,20,16,0"
+        HorizontalOptions="Center"
+        VerticalOptions="Center">
+        <Entry
+            x:Name="entTitle"
+            Placeholder="Enter the title of you experience"
+            TextChanged="EntTitle_TextChanged" />
+        <Entry
+            x:Name="entContent"
+            Placeholder="Enter the content of you experience"
+            TextChanged="EntContent_TextChanged" />
+        <Button
+            x:Name="btnSave"
+            Clicked="BtnSave_Clicked"
+            IsEnabled="False"
+            Style="{StaticResource mainButtonStyle}"
+            Text="Save" />
+        <Button
+            x:Name="btnCancel"
+            Clicked="BtnCancel_Clicked"
+            Style="{StaticResource cancelButtonStyle}"
+            Text="Cancel" />
     </StackLayout>
 </ContentPage>
