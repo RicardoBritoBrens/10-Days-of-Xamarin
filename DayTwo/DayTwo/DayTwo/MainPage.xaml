@@ -21,19 +21,25 @@
             TargetType="Button">
             <Setter Property="BackgroundColor" Value="{StaticResource destructiveColor}" />
         </Style>
+        <Style x:Key="mainEntryStyle" TargetType="Entry">
+            <Setter Property="PlaceholderColor" Value="{StaticResource secondaryColor}" />
+            <Setter Property="TextColor" Value="{StaticResource blackColor}" />
+        </Style>
+        <Style x:Key="mainEditorStyle" TargetType="Editor">
+            <Setter Property="PlaceholderColor" Value="{StaticResource secondaryColor}" />
+            <Setter Property="TextColor" Value="{StaticResource blackColor}" />
+        </Style>
     </ContentPage.Resources>
-    <StackLayout
-        Margin="16,20,16,0"
-        HorizontalOptions="Center"
-        VerticalOptions="Center">
+    <StackLayout Margin="16,20">
         <Entry
             x:Name="entTitle"
-            Placeholder="Enter the title of you experience"
+            Placeholder="Enter the title"
             TextChanged="EntTitle_TextChanged" />
-        <Entry
+        <Editor
             x:Name="entContent"
             Placeholder="Enter the content of you experience"
-            TextChanged="EntContent_TextChanged" />
+            TextChanged="EntContent_TextChanged"
+            VerticalOptions="FillAndExpand" />
         <Button
             x:Name="btnSave"
             Clicked="BtnSave_Clicked"

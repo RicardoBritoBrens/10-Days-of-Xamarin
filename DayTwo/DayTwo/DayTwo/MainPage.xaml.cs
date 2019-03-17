@@ -24,10 +24,6 @@ namespace DayTwo
             {
                 btnSave.IsEnabled = true;
             }
-            else
-            {
-                DisplayAlert("Error", "Title and Content entries can not be empty", "OK");
-            }
         }
 
         private void BtnCancel_Clicked(object sender, EventArgs e)
