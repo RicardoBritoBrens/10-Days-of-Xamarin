@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="DayThree.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:DayThree">
+
+    <StackLayout Margin="16,20">
+        <Entry
+            x:Name="titleEntry"
+            Placeholder="Title of the experience"
+            Style="{StaticResource mainEntryStyle}"
+            TextChanged="TitleEntry_TextChanged" />
+        <Editor
+            x:Name="contentEditor"
+            Placeholder="Write your experience..."
+            Style="{StaticResource mainEditorStyle}"
+            TextChanged="ContentEditor_TextChanged"
+            VerticalOptions="FillAndExpand" />
+        <Button
+            x:Name="saveButton"
+            Clicked="SaveButton_Clicked"
+            IsEnabled="false"
+            Style="{StaticResource mainButtonStyle}"
+            Text="Save" />
+        <Button
+            x:Name="cancelButton"
+            Clicked="CancelButton_Clicked"
+            Style="{StaticResource cancelButtonStyle}"
+            Text="Cancel" /> 
+    </StackLayout>
+
+</ContentPage>

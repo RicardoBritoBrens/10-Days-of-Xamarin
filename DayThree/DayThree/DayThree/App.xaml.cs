@@ -1,13 +1,9 @@
-﻿using Microsoft.AppCenter;
-using Microsoft.AppCenter.Analytics;
-using Microsoft.AppCenter.Crashes;
-using System;
+﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
-
-namespace DayTwo
+namespace DayThree
 {
     public partial class App : Application
     {
@@ -20,7 +16,6 @@ namespace DayTwo
 
         protected override void OnStart()
         {
-            AppCenter.Start("android=476070aa-ac32-4c98-841f-417356e53ac5;" + "uwp={Your UWP App secret here};" + "ios={Your iOS App secret here}", typeof(Analytics), typeof(Crashes));
             // Handle when your app starts
         }
 

@@ -5,13 +5,13 @@
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{3363A2AA-80B8-4977-84C2-662D5B974083}</ProjectGuid>
+    <ProjectGuid>{C9845F75-93F7-4106-A2E9-5458BA19B12C}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TemplateGuid>{6143fdea-f3c2-4a09-aafa-6e230626515e}</TemplateGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>DayTwo.iOS</RootNamespace>
+    <RootNamespace>DayThree.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>DayTwo.iOS</AssemblyName>
+    <AssemblyName>DayThree.iOS</AssemblyName>
     <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
@@ -148,19 +148,16 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.AppCenter.Analytics">
-      <Version>1.14.0</Version>
+    <PackageReference Include="sqlite-net-pcl">
+      <Version>1.5.231</Version>
     </PackageReference>
-    <PackageReference Include="Microsoft.AppCenter.Crashes">
-      <Version>1.14.0</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="3.6.0.220655" />
+    <PackageReference Include="Xamarin.Forms" Version="3.4.0.1008975" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\DayTwo\DayTwo.csproj">
-      <Project>{5501E7AB-9BCF-46B1-A7A3-0C766FF61F04}</Project>
-      <Name>DayTwo</Name>
+    <ProjectReference Include="..\DayThree\DayThree.csproj">
+      <Project>{89A055C3-FDF2-43D2-968F-2168DB902E0B}</Project>
+      <Name>DayThree</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>
