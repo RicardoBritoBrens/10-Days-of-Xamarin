@@ -4,7 +4,8 @@ using System.Text;
 
 namespace DayThree.Persistence
 {
-    interface ISQLiteDb
+    public interface ISQLiteDb
     {
+        string GetDatabasePath();
     }
 }

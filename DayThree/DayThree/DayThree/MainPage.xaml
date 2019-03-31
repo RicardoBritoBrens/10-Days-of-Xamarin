@@ -27,7 +27,6 @@
             x:Name="cancelButton"
             Clicked="CancelButton_Clicked"
             Style="{StaticResource cancelButtonStyle}"
-            Text="Cancel" /> 
+            Text="Cancel" />
     </StackLayout>
-
 </ContentPage>
